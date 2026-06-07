@@ -132,7 +132,7 @@ public partial class ShopDbContext : DbContext
                 .HasColumnType("money")
                 .HasColumnName("price");
 
-            entity.HasOne(d => d.IdCategoryNavigation).WithMany(p => p.Products)
+            entity.HasOne(d => d.Category).WithMany(p => p.Products)
                 .HasForeignKey(d => d.IdCategory)
                 .HasConstraintName("products_id_category_fkey");
 
