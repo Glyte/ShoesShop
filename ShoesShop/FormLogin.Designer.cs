@@ -71,9 +71,9 @@
             btnGuest.BackColor = Color.Silver;
             btnGuest.FlatAppearance.BorderSize = 0;
             btnGuest.FlatStyle = FlatStyle.Flat;
-            btnGuest.Location = new Point(81, 189);
+            btnGuest.Location = new Point(81, 183);
             btnGuest.Name = "btnGuest";
-            btnGuest.Size = new Size(150, 30);
+            btnGuest.Size = new Size(150, 40);
             btnGuest.TabIndex = 5;
             btnGuest.Text = "Войти как гость";
             btnGuest.UseVisualStyleBackColor = false;
@@ -84,9 +84,9 @@
             btnLogin.BackColor = Color.LightGreen;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Location = new Point(81, 151);
+            btnLogin.Location = new Point(81, 145);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(150, 30);
+            btnLogin.Size = new Size(150, 40);
             btnLogin.TabIndex = 4;
             btnLogin.Text = "Войти";
             btnLogin.UseVisualStyleBackColor = false;
