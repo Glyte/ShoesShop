@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace ShoesShop.Models;
+﻿namespace ShoesShop.Models;
 
 public partial class Supplier
 {
