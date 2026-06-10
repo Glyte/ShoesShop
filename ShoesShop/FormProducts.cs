@@ -64,7 +64,7 @@ namespace ShoesShop
                         int rowIndex = dgvProducts.Rows.Add();
                         var row = dgvProducts.Rows[rowIndex];
 
-                        row.Cells["colPhoto"].Value = LoadProductImage(product.PhotoUrl);
+                        row.Cells["colPhoto"].Value = LoadProductImage(product.Id);
 
                         row.Cells["colInfo"].Value = FormatProductInfo(product);
 
@@ -126,20 +126,23 @@ namespace ShoesShop
                 priceText = $"Цена: {product.Price:C}";
             }
 
-            return $"{product.Category.CategoryName} | {product.ProductType}" + Environment.NewLine +
+            return $"{product.Category.CategoryName} | {product.ProductType?.ProdType}" + Environment.NewLine +
                 $"Описание товара: {product.Description}" + Environment.NewLine +
                 $"Производитель: {product.Manufacturer.ManufacturerName}" + Environment.NewLine +
                 $"Поставщик: {product.Supplier.SupplierName}" + Environment.NewLine +
-                $"Цена {priceText}" + Environment.NewLine +
+                $"{priceText}" + Environment.NewLine +
                 $"Единица измерения: {product.Measure.MeasureName}" + Environment.NewLine +
                 $"Количество на складе: {product.CointInStock}";
         }
 
-        private Image LoadProductImage(string photoUrl)
+        private Image LoadProductImage(int productId)
         {
-            if (!String.IsNullOrEmpty(photoUrl) && System.IO.File.Exists(photoUrl))
+            string resourceName = $"shoe_image{productId}";
+            var resourceObject = Resources.ResourceManager.GetObject(resourceName);
+
+            if (resourceObject is Image productImg)
             {
-                return Image.FromFile(photoUrl);
+                return productImg;
             }
 
             return Resources.picture;
