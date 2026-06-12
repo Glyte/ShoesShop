@@ -84,7 +84,7 @@
             btnLogin.BackColor = Color.LightGreen;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Location = new Point(81, 145);
+            btnLogin.Location = new Point(81, 137);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(150, 40);
             btnLogin.TabIndex = 4;

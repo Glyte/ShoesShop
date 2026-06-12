@@ -150,13 +150,38 @@ namespace ShoesShop
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
-            this.Close();
+            this.Hide();
+
+            FormLogin loginForm = new FormLogin();
+
+            if (loginForm.ShowDialog() == DialogResult.OK)
+            {
+                CurrentUser = loginForm.CurrentUser;
+                IsGuest = loginForm.IsGuest;
+                lblUserName.Text = IsGuest ? "Гость" : CurrentUser.FullName;
+
+                LoadProducts();
+                this.Show();
+            }
+            else
+            {
+                this.Close();
+            }
         }
+
+
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
+        }
+
+        private void btnOrders_Click(object sender, EventArgs e)
+        {
+            FormOrders nextForm = new FormOrders(this);
+            nextForm.Show();
+
+            this.Hide();
         }
     }
 }
