@@ -52,7 +52,7 @@
             // 
             // btnOrders
             // 
-            btnOrders.BackColor = Color.Chartreuse;
+            btnOrders.BackColor = Color.LightGreen;
             btnOrders.Dock = DockStyle.Left;
             btnOrders.FlatAppearance.BorderSize = 0;
             btnOrders.FlatStyle = FlatStyle.Flat;
@@ -77,7 +77,7 @@
             // 
             // btnLogout
             // 
-            btnLogout.BackColor = Color.LightGreen;
+            btnLogout.BackColor = Color.Silver;
             btnLogout.Dock = DockStyle.Right;
             btnLogout.FlatAppearance.BorderSize = 0;
             btnLogout.FlatStyle = FlatStyle.Flat;

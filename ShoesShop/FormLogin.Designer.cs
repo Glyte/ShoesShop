@@ -98,6 +98,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(250, 26);
             txtPassword.TabIndex = 3;
+            txtPassword.Text = "8ntwUp";
             txtPassword.UseSystemPasswordChar = true;
             // 
             // lbPassword
@@ -115,6 +116,7 @@
             txtLogin.Name = "txtLogin";
             txtLogin.Size = new Size(250, 26);
             txtLogin.TabIndex = 1;
+            txtLogin.Text = "1diph5e@tutanota.com";
             // 
             // lbLogin
             // 
