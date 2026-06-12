@@ -12,6 +12,8 @@ namespace ShoesShop
     {
         private FormProducts formProducts;
 
+        private bool isBackButtonClicked = false;
+
         public FormOrders()
         {
             InitializeComponent();
@@ -26,7 +28,22 @@ namespace ShoesShop
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
-            Application.Exit();
+
+            if (!isBackButtonClicked)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            if (this.formProducts != null)
+            {
+                isBackButtonClicked = true;
+
+                this.formProducts.Show();
+                this.Close();
+            }
         }
     }
 }
